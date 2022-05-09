@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            Tip calculator
+        </title>
+
+        <link href="tip.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <div id="content">
+
+            <form id="calc" method="POST" action="#">
+                <h3>TIP CALCULATOR</h3>
+                <div id="errors" class="hide">
+                    <div id="error1" class="hide">Bill amount cannot be blank</div>
+                    <div id="error2" class="hide">Number of people must be greater than zero</div>
+                    <div id="error3" class="hide">You must select a service</div>
+                </div>
+
+                <label for="bill">How Much Was Your Bill?</label><br />
+                <input type="text" id="bill"><br />
+
+                <label for="ppl">How Many People Sharing The Bill?</label><br />
+                <input type="text" id="ppl"><br />
+
+                <label for="review">How Was Your Service</label><br />
+                <select name="quality" id="review" placeholder="Choose...">
+                    <option value="choose">Choose...</option>
+                    <option value="great">Great - 20%</option>
+                    <option value="good">Good - 10%</option>
+                    <option value="bad">Bad - 2%</option>
+                </select><br />
+
+                <input type="submit" value="Calculate" id="submit"/> 
+                
+                <div id="result" class="hide">
+                    <div id="total">Total Amount- 300$</div>
+                    <div id="tip">Tip- 20$</div>
+                    <div id="perppl">Per person amount- 5$</div>
+                </div>
+            </div>
+        </form>
+
+        <script src="utility.js"></script>
+        <script src="tip.js"></script>
+    </body>
+</html>
